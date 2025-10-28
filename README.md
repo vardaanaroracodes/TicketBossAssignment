@@ -108,6 +108,3 @@ A `postman_collection.json` file is included for easy testing.
 - postman_collection.json
 - data/ticketboss.db (created at runtime)
 
-Enjoy! If you want, I can also:
-- Push this to a public GitHub repo (you must provide a GitHub token or do it locally), or
-- Add Dockerfile / docker-compose.
