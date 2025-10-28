@@ -2,6 +2,7 @@ const db = require('../db');
 const Joi = require('joi');
 const { v4: uuidv4 } = require('uuid');
 
+//Maximum 10 Seats Per User 
 const reserveSchema = Joi.object({
   partnerId: Joi.string().trim().required(),
   seats: Joi.number().integer().min(1).max(10).required()
@@ -55,6 +56,7 @@ function createReservation(req, res) {
   }
 }
 
+//Cancelling Reservation through the same OCC concept
 function cancelReservation(req, res) {
   const reservationId = req.params.reservationId;
   if (!reservationId) return res.status(400).json({ error: 'reservationId required' });
